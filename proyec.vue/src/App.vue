@@ -1,30 +1,51 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script >
+import router from './router';
 </script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+<div id="app">
+
+  <div class="container">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-decoration-none" href="#"><router-link to="/about">CalculadoraV1</router-link>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><router-link to="/home">CalculadoraV2</router-link>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><router-link to="/horario">Lista y horario</router-link>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><router-link to="/eventos">Eventos</router-link>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><router-link to="/padre">Props</router-link>
+          </a>
+        </li>
+
+       
+      </ul>
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+</nav>  
+  <!-- <nav>
+  </nav> -->
+
+  <router-view></router-view>
+</div>
+</div>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style>
 </style>
